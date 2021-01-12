@@ -1,4 +1,4 @@
-# Dynamic Programming and Data Structure
+# Dynamic Programming and Data Structure(数据结构与动态规划)
 
 - 由于一些敏感因素,因此之前GitHub的master主分支名称被换成了诸如main/root等等中性名词,因此要讲master分支切换为main分支的话, 步骤如下:
     1.1 背景： 本地当前分支为master，远程仓库为main，且远程仓库与本地仓库有 unrelated histories这样的问题，如远程仓库有README.md但本地没有；
@@ -23,5 +23,3 @@
 - [git 推送更新出现错误： Updates were rejected because the remote contains work that you do]https://blog.csdn.net/gongqinglin/article/details/79752398
 
 - [动态规划DP算法]https://www.bilibili.com/video/BV1nt4y1Y7n7?from=search&seid=6684713305482880559
-
-- xxxxxxxx
