@@ -85,14 +85,22 @@ public:
                 f[k][i] = INT_MAX;
                 int s = 0;
                 for (j=i;j>=0;j--){
-                    // 0 3 0 2 5 0 4 6 9 0 3 0 2 5 0 4 6 9 result = 5
-                    cout << s << " ";
+                    // 0 3 0 2 5 0 4 6 9 0 3 0 2 5 0 4 6 9 result = 4
+                    // if (j > 0){
+                    //     s = sum[i-1] - sum[j-1];
+                    //     cout << sum[i-1] << "/" << sum[j-1] <<" ";
+                    // }
+                    // cout << sum[i-1] << "/" << sum[j-1] << " ";
                     // pages[j]+...+pages[i-1]
                     // sum[i-1] = pages[0] + pages[1] + ... + pages[j-1] + pages[j] + ... +pages[i-1]
                     // sum[j-1] = pages[0] + pages[1] + ... + pages[j-1]
                     f[k][i] = min(f[k][i], max(f[k-1][j], s));
                     if (j > 0){
-                        s = sum[i-1] - sum[j];
+                        // s = sum[i] - sum[j];
+                        // cout << sum[i-1] << "*" << sum[j-1] <<" ";
+                        cout << pages[j-1] << "*" << j-1 << "*" << s << " ";  
+                        s += pages[j-1];
+                        
                     }
                 }
             }
@@ -104,8 +112,9 @@ public:
 int main(){
     int temp[] = {3, 2, 4};
     vector<int> pages(temp, temp+3);
-    int K = 3;
+    int K = 2;
     Solution s;
     int result = s.copyBooks(pages, K);
+    cout << endl;
     cout << "result = " << result << endl; 
 }
