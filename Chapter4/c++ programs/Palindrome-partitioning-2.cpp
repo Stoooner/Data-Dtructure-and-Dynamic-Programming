@@ -7,14 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    /**
-     * @param s: A string
-     * @return: An integer
-     */
-    bool calcPalin(string &s, bool **f, int n){
-        // int n = s.size();
-        cout << "n = " << n << endl;
-        // bool f[n][n];
+    void calcPalin(string &s, vector<std::vector<bool> > &f, int n){
         for (int i=0;i<n;i++){
             for (int j=i;j<n;j++){
                 f[i][j] = false;
@@ -44,27 +37,18 @@ public:
                 j++;
             }
         }
-
-        return f;
     }
-
     int minCut(string &s) {
         // write your code here
         int n = s.size();
         if (n == 0){
             return 0;
         }
-        //calcPalin(s);
-        bool * isPalin[n][n];
-        int i;
-        for (i=0; n>i; i++)
-        {
-            
-        }
 
-        isPalin = calcPalin(s, isPalin, n);
         int f[n+1];
         f[0] = 0;
+        vector< vector<bool> > isPalin(n, vector<bool>(n, 0));
+        calcPalin(s, isPalin, n);        
         for (int i=1;i<=n;i++){
             f[i] = INT_MAX;
             // 0 <= j <= i-1;前0个到前i-1个
@@ -79,8 +63,8 @@ public:
 };
 
 int main(){
-    string ss = "abcba";
+    string ss = "aab";
     Solution s;
-    s.calcPalin(ss);
-    
+    int result = s.minCut(ss);
+    cout << "result = " << result << endl;
 }
