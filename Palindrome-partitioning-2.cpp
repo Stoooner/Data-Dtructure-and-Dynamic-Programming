@@ -48,15 +48,7 @@ public:
         int f[n+1];
         f[0] = 0;
         vector< vector<bool> > isPalin(n, vector<bool>(n, 0));
-
-        calcPalin(s, isPalin, n);
-        for (int i=0;i<n;i++){
-            for (int j=0;j<n;j++){
-                cout << isPalin[i][j]<< endl;
-            }
-        }
-        
-        
+        calcPalin(s, isPalin, n);        
         for (int i=1;i<=n;i++){
             f[i] = INT_MAX;
             // 0 <= j <= i-1;前0个到前i-1个
