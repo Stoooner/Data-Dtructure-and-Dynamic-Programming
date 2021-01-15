@@ -25,3 +25,12 @@
 - [动态规划DP算法]https://www.bilibili.com/video/BV1nt4y1Y7n7?from=search&seid=6684713305482880559
 
 - [Your branch is ahead of 'origin/master' by 2 commits.]https://blog.csdn.net/weixin_38694789/article/details/103325155
+
+## leetcode模板
+- 1. [网页版——LeetCode解题笔记]http://leetcode.xyu.ink/#/README
+- 2. [github——LeetCode解题笔记]https://github.com/misads/leetcode
+- 3. [【LeetCode】代码模板，刷题必会]https://blog.csdn.net/fuxuemingzhu/article/details/101900729
+- 4. [greyireland/algorithm-pattern]https://github.com/greyireland/algorithm-pattern
+- 5. [资源|火爆Github！这套LeetCode 刷题模板也太实用了]https://zhuanlan.zhihu.com/p/225180424
+- 6. [算法模板(重点)]https://greyireland.gitbook.io/algorithm-pattern/
+- 7. 
