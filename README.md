@@ -33,4 +33,3 @@
 - 4. [greyireland/algorithm-pattern]https://github.com/greyireland/algorithm-pattern
 - 5. [资源|火爆Github！这套LeetCode 刷题模板也太实用了]https://zhuanlan.zhihu.com/p/225180424
 - 6. [算法模板(重点)]https://greyireland.gitbook.io/algorithm-pattern/
-- 7. 
