@@ -1,30 +1,26 @@
 class Solution:
     """
-    @param m: positive integer (1 <= m <= 100)
-    @param n: positive integer (1 <= n <= 100)
+    @param nums: An array of integers
     @return: An integer
     """
-    def uniquePaths(self, m, n):
-        # write your code here
-        if m == 0 or n == 0:
+    def maxProduct(self, nums):
+        n = len(nums)
+        if n == 0:
             return -1
-        # 初始化一个多维数组的正确方式：
-        f = [[0 for j in range(n)] for i in range(2)]
-        old = now = 0
-        # 下面这种方式不对，因为*m只是把对象的引用复制了m次, 因此f[0][0]修改时，f[i][0]也会更改
-        # f = [[0]*n]*m
-        for i in range(m):
-            old = now
-            now = 1 - now
-            for j in range(n):
-                if i == 0 or j == 0:
-                    f[now][j] = 1
-                else:
-                    f[now][j] = f[old][j] + f[now][j-1]
-        return f[now][n-1]
+        f = [0 for i in range(n)]
+        g = [0 for j in range(n)]
+        result = float("-inf")
+        for j in range(n):
+            f[j] = g[j] = nums[j]
+            if j > 0:
+                f[j] = max(f[j], max(f[j-1]*nums[j], g[j-1]*nums[j]))
+                g[j] = min(g[j], min(g[j-1]*nums[j], f[j-1]*nums[j]))
 
-if __name__ == '__main__':
-    s = Solution()
-    m, n = 3, 3
-    result = s.uniquePaths(m, n)
-    print("result = ", result)
+            result = max(result, f[j])
+        return result
+            
+
+
+if __name__ == "__main__":
+    nums = [2,3,-2,4]
+    print("result = ", Solution().maxProduct(nums))
