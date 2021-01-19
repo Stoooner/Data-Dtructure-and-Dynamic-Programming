@@ -10,7 +10,7 @@ public:
      * @param prices: Given an integer array
      * @return: Maximum profit
      */
-    int maxProfit(vector<int> &prices) {
+    int maxProfit_1(vector<int> &prices) {
         // write your code here
         // 保底策略：什么都不做，利润0
         int n = prices.size();
